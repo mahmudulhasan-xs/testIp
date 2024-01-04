@@ -1,7 +1,7 @@
 // initialize simple express app that will print ip address of the request on root route
 const express = require('express');
 const app = express();
-app.set('trust proxy', 1);
+app.set('trust proxy', 0);
 app.get('/', (req, res) => {
     const ip = req.ip;
     res.send(`Your IP address is ${ip}`);
